@@ -1,19 +1,19 @@
 GET /api/health
-{"status":"ok","app":"Personal Net Worth Tracker","domain":"FinTech"}
+{"status":"ok"}
 
 GET /api/schema
-{"statuses":["logged", "reconciled", "audited", "reported"],"fields":[{"key":"account_or_wallet"},{"key":"amount"},{"key":"risk_notes"}]}
+{"domain":"FinTech","entity":"Financial Record","statuses":["captured", "reconciled", "audited", "reported"]}
 
-POST /api/records
+POST /api/items
 {
   "id": 1,
-  "title": "Demo Record",
-  "status": "reconciled",
+  "title": "Phase3 Demo",
+  "status": "captured",
   "payload": {
-    "account_or_wallet": "Demo value",
-    "amount": 12,
-    "risk_notes": "seed note"
+    "account_ref": "sample",
+    "amount": 5,
+    "compliance_notes": "notes"
   },
-  "created_at": "2026-03-24T15:52:22.227951+00:00",
-  "updated_at": "2026-03-24T15:52:22.227951+00:00"
+  "created_at": "2026-03-24T16:15:11.719753+00:00",
+  "updated_at": "2026-03-24T16:15:11.719753+00:00"
 }
